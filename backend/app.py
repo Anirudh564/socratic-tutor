@@ -80,7 +80,13 @@ class Student(db.Model):
 # API Routes
 
 
-    
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -155,7 +161,7 @@ def sync_progress():
     new_progress = data.get('new_progress') #example  {"Array": 5, "String": 3}
     student = Student.query.get(student_id)
     if student:
-        student.progress_data = jsonify(new_progress).data.decode('utf-8')
+        student.progress_data = json.dumps(new_progress)
         db.session.commit()
         return jsonify({'message': 'Progress synced successfully'}), 200
     else:
