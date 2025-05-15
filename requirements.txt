@@ -5,4 +5,4 @@ flask_sqlalchemy
 flask_bcrypt
 requests
 gunicorn
-google
+google-generativeai
