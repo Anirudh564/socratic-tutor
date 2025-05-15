@@ -1,3 +1,7 @@
 Flask
+flask_cors
+dotenv
+flask_sqlalchemy
+flask_bcrypt
 requests
 gunicorn
