@@ -1,0 +1,87 @@
+/* General Page Styling */
+.registration-page {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    font-family: 'Arial', sans-serif;
+}
+
+/* Registration Container */
+.registration-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    color: white;
+    width: 350px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+.btn-primary2, .btn-secondary2 {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.btn-primary2 {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-primary2:hover {
+    background: #ff3b3b;
+}
+
+.btn-secondary2 {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary2:hover {
+    background: white;
+    color: #4A90E2;
+}
+
+/* Message Display */
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffcc00;
+}
